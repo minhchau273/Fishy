@@ -12,7 +12,8 @@
 		A5353D991CE383B50074EC22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5353D981CE383B50074EC22 /* Assets.xcassets */; };
 		A5353D9C1CE383B50074EC22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5353D9A1CE383B50074EC22 /* LaunchScreen.storyboard */; };
 		A5353DAA1CE384FF0074EC22 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5353DA91CE384FF0074EC22 /* FirstViewController.swift */; };
-		A5353DAD1CE38B9D0074EC22 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5353DAC1CE38B9D0074EC22 /* HttpClient.swift */; };
+		A5353DAD1CE38B9D0074EC22 /* FishyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5353DAC1CE38B9D0074EC22 /* FishyClient.swift */; };
+		A56C51811CE3924B000D9406 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C51801CE3924B000D9406 /* Router.swift */; };
 		DC9CDAE6F6AACDEA39C9B033 /* Pods_Fishy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FA6EAC5FA426C99F67B653 /* Pods_Fishy.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,8 @@
 		A5353D9B1CE383B50074EC22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5353D9D1CE383B50074EC22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5353DA91CE384FF0074EC22 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A5353DAC1CE38B9D0074EC22 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		A5353DAC1CE38B9D0074EC22 /* FishyClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishyClient.swift; sourceTree = "<group>"; };
+		A56C51801CE3924B000D9406 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BB32D44EC17333BD7019C179 /* Pods-Fishy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fishy/Pods-Fishy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +56,6 @@
 		A5353D851CE383B50074EC22 = {
 			isa = PBXGroup;
 			children = (
-				A5353DAB1CE38B700074EC22 /* API */,
 				A5353D901CE383B50074EC22 /* Fishy */,
 				A5353D8F1CE383B50074EC22 /* Products */,
 				57C717980B26153B0EDB2B60 /* Pods */,
@@ -75,6 +76,7 @@
 			children = (
 				A5353D911CE383B50074EC22 /* AppDelegate.swift */,
 				A5353D951CE383B50074EC22 /* Main.storyboard */,
+				A5353DAB1CE38B700074EC22 /* API */,
 				A5353DA71CE384650074EC22 /* View Controllers */,
 				A5353DA81CE384650074EC22 /* Views */,
 				A5353D981CE383B50074EC22 /* Assets.xcassets */,
@@ -102,10 +104,10 @@
 		A5353DAB1CE38B700074EC22 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A5353DAC1CE38B9D0074EC22 /* HttpClient.swift */,
+				A5353DAC1CE38B9D0074EC22 /* FishyClient.swift */,
+				A56C51801CE3924B000D9406 /* Router.swift */,
 			);
-			name = API;
-			path = Fishy/API;
+			path = API;
 			sourceTree = "<group>";
 		};
 		CD4996A3DE5DF1C16C743EF1 /* Frameworks */ = {
@@ -239,8 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56C51811CE3924B000D9406 /* Router.swift in Sources */,
 				A5353D921CE383B50074EC22 /* AppDelegate.swift in Sources */,
-				A5353DAD1CE38B9D0074EC22 /* HttpClient.swift in Sources */,
+				A5353DAD1CE38B9D0074EC22 /* FishyClient.swift in Sources */,
 				A5353DAA1CE384FF0074EC22 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

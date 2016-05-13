@@ -41,4 +41,81 @@ class FishyClient {
     }
   }
   
+  static func disconnectServer(completion: (status: String?, error: NSError?) -> ()) {
+    requestAPI(Router.DisconnectServer) { (json, error) -> Void in
+      if let json = json {
+        completion(status: json["msg"].stringValue, error: nil)
+      } else {
+        completion(status: nil, error: error)
+        print("Error when disconnecting")
+      }
+    }
+  }
+  
+  static func getTemp(completion: (message: String?, error: NSError?) -> ()) {
+    requestAPI(Router.GetTemp) { (json, error) -> Void in
+      if let json = json {
+        completion(message: json["msg"].stringValue, error: nil)
+      } else {
+        completion(message: nil, error: error)
+        print("Error when getting temp")
+      }
+    }
+  }
+  
+  static func feed(completion: (message: String?, error: NSError?) -> ()) {
+    requestAPI(Router.Feed) { (json, error) -> Void in
+      if let json = json {
+        completion(message: json["msg"].stringValue, error: nil)
+      } else {
+        completion(message: nil, error: error)
+        print("Error when feeding")
+      }
+    }
+  }
+  
+  static func turnOnFan(completion: (message: String?, error: NSError?) -> ()) {
+    requestAPI(Router.TurnOnFan) { (json, error) -> Void in
+      if let json = json {
+        completion(message: json["msg"].stringValue, error: nil)
+      } else {
+        completion(message: nil, error: error)
+        print("Error when turning fan on")
+      }
+    }
+  }
+  
+  static func turnOffFan(completion: (message: String?, error: NSError?) -> ()) {
+    requestAPI(Router.TurnOffFan) { (json, error) -> Void in
+      if let json = json {
+        completion(message: json["msg"].stringValue, error: nil)
+      } else {
+        completion(message: nil, error: error)
+        print("Error when turning fan off")
+      }
+    }
+  }
+  
+  static func turnOnLight(completion: (message: String?, error: NSError?) -> ()) {
+    requestAPI(Router.TurnOnLight) { (json, error) -> Void in
+      if let json = json {
+        completion(message: json["msg"].stringValue, error: nil)
+      } else {
+        completion(message: nil, error: error)
+        print("Error when turning light on")
+      }
+    }
+  }
+  
+  static func turnOffLight(completion: (message: String?, error: NSError?) -> ()) {
+    requestAPI(Router.TurnOffLight) { (json, error) -> Void in
+      if let json = json {
+        completion(message: json["msg"].stringValue, error: nil)
+      } else {
+        completion(message: nil, error: error)
+        print("Error when turning light off")
+      }
+    }
+  }
+  
 }

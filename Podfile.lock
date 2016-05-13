@@ -1,16 +1,28 @@
 PODS:
   - Alamofire (3.4.0)
   - SwiftSpinner (0.9.5)
+  - SwiftString (0.5.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - SwiftSpinner
+  - SwiftString (from `git@github.com:amayne/SwiftString.git`)
   - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SwiftString:
+    :git: git@github.com:amayne/SwiftString.git
+
+CHECKOUT OPTIONS:
+  SwiftString:
+    :commit: e6a55a19972d9a5304eb7606be0443d6500f0257
+    :git: git@github.com:amayne/SwiftString.git
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
+  SwiftString: 55c189fc54f3f5e3030a355155be47c41852bcc6
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

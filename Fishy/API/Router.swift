@@ -17,22 +17,25 @@ public enum Router: URLRequestConvertible {
   public var URLRequest: NSMutableURLRequest {
     let result: (method: String, path: String, params: [String: AnyObject]?) = {
       switch self {
-      case .ConnectServer: return ("GET", "/connect", nil)
+      case .ConnectServer: return ("GET", "/7", nil)
       case .Fan: return ("GET", "/fan", nil)
       case .Light: return ("GET", "/light", nil)
       case .Food: return ("GET", "/food", nil)
       }
     }()
     
-    let baseUrl = NSURL(string: FishyClient.baseUrl)!
-    let baseUrlRequest = NSMutableURLRequest(URL: baseUrl.URLByAppendingPathComponent(result.path))
-    baseUrlRequest.HTTPMethod = result.method
-    
-    var encoding = Alamofire.ParameterEncoding.JSON
-    if result.method == "GET" {
-      encoding = Alamofire.ParameterEncoding.URL
+    if let baseUrl = NSURL(string: FishyClient.baseUrl) {
+      let baseUrlRequest = NSMutableURLRequest(URL: baseUrl.URLByAppendingPathComponent(result.path))
+      baseUrlRequest.HTTPMethod = result.method
+      
+      var encoding = Alamofire.ParameterEncoding.JSON
+      if result.method == "GET" {
+        encoding = Alamofire.ParameterEncoding.URL
+      }
+      
+      return encoding.encode(baseUrlRequest, parameters: result.params ?? [String: AnyObject]()).0
     }
     
-    return encoding.encode(baseUrlRequest, parameters: result.params ?? [String: AnyObject]()).0
+    return NSMutableURLRequest()
   }
 }

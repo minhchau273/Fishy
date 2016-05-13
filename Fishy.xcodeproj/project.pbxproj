@@ -14,6 +14,11 @@
 		A5353DAA1CE384FF0074EC22 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5353DA91CE384FF0074EC22 /* FirstViewController.swift */; };
 		A5353DAD1CE38B9D0074EC22 /* FishyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5353DAC1CE38B9D0074EC22 /* FishyClient.swift */; };
 		A56C51811CE3924B000D9406 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C51801CE3924B000D9406 /* Router.swift */; };
+		A56C51861CE39CF1000D9406 /* SwiftSpinner+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C51851CE39CF1000D9406 /* SwiftSpinner+Extensions.swift */; };
+		A5C9AEC01CE60C2D0034ABBC /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9AEBF1CE60C2D0034ABBC /* UIImage+Extensions.swift */; };
+		A5C9AEC21CE60C570034ABBC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9AEC11CE60C570034ABBC /* SecondViewController.swift */; };
+		A5C9AEC51CE60ED60034ABBC /* FishyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9AEC41CE60ED60034ABBC /* FishyColor.swift */; };
+		A5C9AEC71CE60F210034ABBC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9AEC61CE60F210034ABBC /* UIColor+Extensions.swift */; };
 		DC9CDAE6F6AACDEA39C9B033 /* Pods_Fishy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FA6EAC5FA426C99F67B653 /* Pods_Fishy.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,11 @@
 		A5353DA91CE384FF0074EC22 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		A5353DAC1CE38B9D0074EC22 /* FishyClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishyClient.swift; sourceTree = "<group>"; };
 		A56C51801CE3924B000D9406 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A56C51851CE39CF1000D9406 /* SwiftSpinner+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftSpinner+Extensions.swift"; sourceTree = "<group>"; };
+		A5C9AEBF1CE60C2D0034ABBC /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		A5C9AEC11CE60C570034ABBC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A5C9AEC41CE60ED60034ABBC /* FishyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishyColor.swift; sourceTree = "<group>"; };
+		A5C9AEC61CE60F210034ABBC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		BB32D44EC17333BD7019C179 /* Pods-Fishy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fishy/Pods-Fishy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,8 +87,10 @@
 				A5353D911CE383B50074EC22 /* AppDelegate.swift */,
 				A5353D951CE383B50074EC22 /* Main.storyboard */,
 				A5353DAB1CE38B700074EC22 /* API */,
+				A56C51821CE39BD0000D9406 /* Extensions */,
 				A5353DA71CE384650074EC22 /* View Controllers */,
 				A5353DA81CE384650074EC22 /* Views */,
+				A5C9AEC31CE60EC60034ABBC /* Models */,
 				A5353D981CE383B50074EC22 /* Assets.xcassets */,
 				A5353D9A1CE383B50074EC22 /* LaunchScreen.storyboard */,
 				A5353D9D1CE383B50074EC22 /* Info.plist */,
@@ -90,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A5353DA91CE384FF0074EC22 /* FirstViewController.swift */,
+				A5C9AEC11CE60C570034ABBC /* SecondViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -108,6 +121,24 @@
 				A56C51801CE3924B000D9406 /* Router.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		A56C51821CE39BD0000D9406 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A56C51851CE39CF1000D9406 /* SwiftSpinner+Extensions.swift */,
+				A5C9AEBF1CE60C2D0034ABBC /* UIImage+Extensions.swift */,
+				A5C9AEC61CE60F210034ABBC /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5C9AEC31CE60EC60034ABBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5C9AEC41CE60ED60034ABBC /* FishyColor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CD4996A3DE5DF1C16C743EF1 /* Frameworks */ = {
@@ -241,9 +272,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C9AEC21CE60C570034ABBC /* SecondViewController.swift in Sources */,
+				A5C9AEC71CE60F210034ABBC /* UIColor+Extensions.swift in Sources */,
 				A56C51811CE3924B000D9406 /* Router.swift in Sources */,
+				A56C51861CE39CF1000D9406 /* SwiftSpinner+Extensions.swift in Sources */,
 				A5353D921CE383B50074EC22 /* AppDelegate.swift in Sources */,
+				A5C9AEC01CE60C2D0034ABBC /* UIImage+Extensions.swift in Sources */,
 				A5353DAD1CE38B9D0074EC22 /* FishyClient.swift in Sources */,
+				A5C9AEC51CE60ED60034ABBC /* FishyColor.swift in Sources */,
 				A5353DAA1CE384FF0074EC22 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

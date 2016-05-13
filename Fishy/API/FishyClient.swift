@@ -33,7 +33,7 @@ class FishyClient {
   static func connectServer(completion: (status: String?, error: NSError?) -> ()) {
     requestAPI(Router.ConnectServer) { (json, error) -> Void in
       if let json = json {
-        completion(status: json["status"].stringValue, error: nil)
+        completion(status: json["msg"].stringValue, error: nil)
       } else {
         completion(status: nil, error: error)
         print("Error when connecting")

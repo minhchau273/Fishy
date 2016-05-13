@@ -7,5 +7,6 @@ target 'Fishy' do
   pod 'Alamofire', '~> 3.4'
   pod 'SwiftSpinner'
   pod 'SwiftyJSON'
+  pod 'SwiftString', :git => 'git@github.com:amayne/SwiftString.git'
 end
 

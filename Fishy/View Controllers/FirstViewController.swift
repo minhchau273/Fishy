@@ -18,6 +18,10 @@ class FirstViewController: UIViewController {
     super.viewDidLoad()
     
     
+    
+    //    FishyClient.connectServer { (status, error) in
+    //      print("asf")
+    //    }
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -63,6 +67,18 @@ class FirstViewController: UIViewController {
   }
   
   @IBAction func onConnectButtonTapped(sender: UIButton) {
-    
+    if let ipAddress = ipTextField.text where ipAddress.characters.count > 0 {
+      FishyClient.baseUrl = "http://\(ipAddress)"
+      view.endEditing(true)
+      SwiftSpinner.show("Connecting...")
+      FishyClient.connectServer({ (status, error) in
+        if let error = error {
+          SwiftSpinner.handleUserInfoError(error)
+        } else {
+          SwiftSpinner.hide()
+          self.performSegueWithIdentifier("GoToSecondScreen", sender: self)
+        }
+      })
+    }
   }
 }

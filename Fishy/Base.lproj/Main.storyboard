@@ -65,11 +65,134 @@
                     <connections>
                         <outlet property="connectButtonBottomConstraint" destination="aVl-jT-4gc" id="jeN-Vq-I3t"/>
                         <outlet property="ipTextField" destination="VKl-eD-y1C" id="FVP-is-283"/>
+                        <segue destination="VOU-Mh-V0q" kind="modal" identifier="GoToSecondScreen" id="Vnr-MB-oBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130" y="295"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="mY5-gD-QoK">
+            <objects>
+                <viewController id="VOU-Mh-V0q" customClass="SecondViewController" customModule="Fishy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P0w-wa-mDh"/>
+                        <viewControllerLayoutGuide type="bottom" id="zzg-mA-Kbw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qJd-Z6-3Zw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA2-fg-hih">
+                                <rect key="frame" x="20" y="28" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZi-f5-nkP">
+                                <rect key="frame" x="20" y="57" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZi-Zq-cLh">
+                                <rect key="frame" x="175" y="28" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcW-vq-1UD">
+                                <rect key="frame" x="175" y="57" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUZ-8D-gwe">
+                                <rect key="frame" x="107" y="388" width="106" height="52"/>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.67450980392156867" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="MMV-PZ-axz"/>
+                                    <constraint firstAttribute="height" constant="52" id="zWI-Rj-Q0l"/>
+                                </constraints>
+                                <state key="normal" title="Disconnect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onConnectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTX-Sf-6el"/>
+                                    <action selector="onDisconnectTapped:" destination="VOU-Mh-V0q" eventType="touchUpInside" id="3pF-Pv-39v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAa-Nr-L09">
+                                <rect key="frame" x="35" y="241" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="D8C-on-jE9"/>
+                                    <constraint firstAttribute="height" constant="80" id="oNa-7o-poh"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="FanOn"/>
+                                <connections>
+                                    <action selector="onFanTapped:" destination="VOU-Mh-V0q" eventType="touchUpInside" id="hge-Wy-1Rw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK5-hk-YlL">
+                                <rect key="frame" x="205" y="241" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="47f-h7-alN"/>
+                                    <constraint firstAttribute="height" constant="80" id="ojK-Xt-yaU"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="LightOn"/>
+                                <connections>
+                                    <action selector="onLightTapped:" destination="VOU-Mh-V0q" eventType="touchUpInside" id="thh-sf-zJ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFw-9w-6w1">
+                                <rect key="frame" x="120" y="118" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="IVf-YS-Ns2"/>
+                                    <constraint firstAttribute="width" constant="80" id="wqx-1r-eV8"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Food"/>
+                                <connections>
+                                    <action selector="onFoodTapped:" destination="VOU-Mh-V0q" eventType="touchUpInside" id="IlE-20-htG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YZi-f5-nkP" firstAttribute="top" secondItem="jA2-fg-hih" secondAttribute="bottom" constant="8" id="32E-IN-GTa"/>
+                            <constraint firstItem="oAa-Nr-L09" firstAttribute="top" secondItem="yFw-9w-6w1" secondAttribute="bottom" constant="43" id="AQk-DZ-NHP"/>
+                            <constraint firstItem="lZi-Zq-cLh" firstAttribute="leading" secondItem="jA2-fg-hih" secondAttribute="trailing" constant="40" id="DSj-in-od9"/>
+                            <constraint firstItem="yFw-9w-6w1" firstAttribute="centerX" secondItem="qJd-Z6-3Zw" secondAttribute="centerX" id="K4x-di-VMy"/>
+                            <constraint firstItem="jA2-fg-hih" firstAttribute="top" secondItem="P0w-wa-mDh" secondAttribute="bottom" constant="8" id="Oat-HZ-GO5"/>
+                            <constraint firstItem="oAa-Nr-L09" firstAttribute="leading" secondItem="qJd-Z6-3Zw" secondAttribute="leading" constant="35" id="TED-KX-fOx"/>
+                            <constraint firstItem="TcW-vq-1UD" firstAttribute="baseline" secondItem="YZi-f5-nkP" secondAttribute="baseline" id="YN6-SO-QNk"/>
+                            <constraint firstAttribute="trailing" secondItem="kK5-hk-YlL" secondAttribute="trailing" constant="35" id="cYz-iS-h7g"/>
+                            <constraint firstItem="yFw-9w-6w1" firstAttribute="top" secondItem="TcW-vq-1UD" secondAttribute="bottom" constant="40" id="gRk-7a-ArJ"/>
+                            <constraint firstItem="YZi-f5-nkP" firstAttribute="leading" secondItem="jA2-fg-hih" secondAttribute="leading" id="jPd-Qt-6nN"/>
+                            <constraint firstItem="lZi-Zq-cLh" firstAttribute="baseline" secondItem="jA2-fg-hih" secondAttribute="baseline" id="lFm-ID-rBS"/>
+                            <constraint firstItem="zzg-mA-Kbw" firstAttribute="top" secondItem="HUZ-8D-gwe" secondAttribute="bottom" constant="128" id="oMp-pa-Qxc"/>
+                            <constraint firstItem="kK5-hk-YlL" firstAttribute="centerY" secondItem="oAa-Nr-L09" secondAttribute="centerY" id="ori-H7-Iye"/>
+                            <constraint firstItem="jA2-fg-hih" firstAttribute="leading" secondItem="qJd-Z6-3Zw" secondAttribute="leading" constant="20" id="ppF-E1-8LY"/>
+                            <constraint firstItem="HUZ-8D-gwe" firstAttribute="centerX" secondItem="qJd-Z6-3Zw" secondAttribute="centerX" id="scj-bF-3fE"/>
+                            <constraint firstItem="TcW-vq-1UD" firstAttribute="leading" secondItem="lZi-Zq-cLh" secondAttribute="leading" id="wXK-Ld-wWy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fanButton" destination="oAa-Nr-L09" id="qOs-gL-F44"/>
+                        <outlet property="foodButton" destination="yFw-9w-6w1" id="AoB-9v-tNG"/>
+                        <outlet property="lightButton" destination="kK5-hk-YlL" id="iuz-q4-82q"/>
+                        <outlet property="temp1Label" destination="lZi-Zq-cLh" id="H4D-Fc-tty"/>
+                        <outlet property="temp2Label" destination="TcW-vq-1UD" id="TZP-bZ-xeD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rs-o3-cJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="295"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="FanOn" width="238" height="238"/>
+        <image name="Food" width="100" height="100"/>
+        <image name="LightOn" width="256" height="256"/>
+    </resources>
 </document>
